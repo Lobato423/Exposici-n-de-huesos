@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Exposición de huesos</title>
+
+<style>
+
+/* ===== GENERAL ===== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+
+    background-image:url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+/* ===== BARRA SUPERIOR ===== */
+
+header{
+    width:100%;
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:15px 40px;
+
+    position:sticky;
+    top:0;
+
+    z-index:1000;
+
+    box-shadow:0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* ===== LOGO ===== */
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    width:45px;
+}
+
+.logo h2{
+    color:#2e7d32;
+}
+
+/* ===== MENÚ ===== */
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:green;
+}
+
+/* ===== BUSCADOR ===== */
+
+.buscador{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.buscador input{
+    padding:10px;
+    border:none;
+    border-radius:20px;
+    width:200px;
+}
+
+.buscador button{
+    padding:10px 15px;
+    border:none;
+    border-radius:20px;
+    background:#2e7d32;
+    color:white;
+    cursor:pointer;
+}
+
+/* ===== TITULO ===== */
+
+h1{
+    text-align:center;
+    margin-top:40px;
+    color:black;
+    font-size:55px;
+
+    text-shadow:2px 2px 10px white;
+}
+
+/* ===== CONTENEDOR ===== */
+
+.contenedor{
+    background:rgba(255,255,255,0.8);
+
+    margin:40px;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    flex-wrap:wrap;
+
+    gap:30px;
+}
+
+/* ===== CAJAS ===== */
+
+.caja{
+    text-align:center;
+}
+
+.caja img{
+
+    width:250px;
+    height:180px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    transition:0.4s;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+.caja img:hover{
+
+    transform:scale(1.08);
+
+    filter:brightness(1.1);
+}
+
+.caja p{
+    margin-top:10px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:white;
+    font-size:18px;
+}
+
+/* ===== MÓVIL ===== */
+
+@media(max-width:900px){
+
+    header{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .buscador input{
+        width:150px;
+    }
+
+    h1{
+        font-size:40px;
+    }
+
+    .caja img{
+        width:100%;
+        max-width:320px;
+        height:220px;
+    }
+
+    .contenedor{
+        margin:15px;
+        padding:20px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+
+<header>
+
+    <!-- LOGO -->
+
+    <div class="logo">
+
+        <img src="https://cdn-icons-png.flaticon.com/512/616/616554.png">
+
+        <h2>BioMuseo</h2>
+
+    </div>
+
+    <!-- MENÚ -->
+
+    <nav>
+
+        <a href="#">Inicio</a>
+
+        <a href="#">Animales</a>
+
+        <a href="#">Mamíferos</a>
+
+        <a href="#">Aves</a>
+
+        <a href="#">Contacto</a>
+
+    </nav>
+
+    <!-- BUSCADOR -->
+
+    <div class="buscador">
+
+        <input type="text" id="buscador" placeholder="Buscar hueso o animal...">
+
+        <button>Buscar</button>
+
+    </div>
+
+</header>
+
+<!-- ===== TITULO ===== -->
+
+<h1>Exposición de huesos</h1>
+
+<!-- ===== CONTENIDO ===== -->
+
+<div class="contenedor">
+
+    <div class="caja" data-nombre="Tejón">
+
+        <a href="tejon.html">
+
+            <img src="tejon.png">
+
+        </a>
+
+        <p>Tejón</p>
+
+    </div>
+
+    <div class="caja" data-nombre="Garduña">
+
+        <a href="Garduña.html">
+
+            <img src="Garduña.png">
+
+        </a>
+
+        <p>Garduña</p>
+
+    </div>
+
+    <div class="caja" data-nombre="Nóctulo grande">
+
+        <a href="Nóctulo grande.html">
+
+            <img src="Nóctulo grande.png">
+
+        </a>
+
+        <p>Nóctulo grande</p>
+
+    </div>
+
+   <div class="caja" data-nombre="Turón">
+
+        <a href="Turón.html">
+
+            <img src="Turón.png">
+
+        </a>
+
+        <p>Turón</p>
+
+    </div>
+
+</div>
+
+<footer>
+
+    © 2026 BioMuseo - Exposición biológica
+
+</footer>
+<!-- ===== JAVASCRIPT BUSCADOR ===== -->
+
+<script>
+
+const buscador = document.getElementById("buscador");
+const cajas = document.querySelectorAll(".caja");
+
+buscador.addEventListener("keyup", function(){
+
+    const texto = buscador.value.toLowerCase();
+
+    cajas.forEach(caja => {
+
+        const nombre = caja.dataset.nombre.toLowerCase();
+
+        if(nombre.includes(texto)){
+            caja.style.display = "block";
+        }
+        else{
+            caja.style.display = "none";
+        }
+
+    });
+
+});
+
+</script>
+</body>
+</html>

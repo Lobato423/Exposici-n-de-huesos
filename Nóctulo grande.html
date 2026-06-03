@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nóctulo Grande</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial;
+    background-image: url("https://picsum.photos/1600/900?nature");
+    background-size: cover;
+    background-position: center;
+}
+
+.contenido{
+    background: rgba(255,255,255,0.9);
+    margin: 40px;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.titulo{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.imagen-principal{
+    width:100%;
+    height:400px;
+    object-fit: cover;
+    border-radius:10px;
+}
+
+.galeria{
+    display:flex;
+    gap:20px;
+    margin-top:20px;
+}
+
+.galeria img{
+    width:33%;
+    height:200px;
+    object-fit: cover;
+    border-radius:10px;
+}
+
+.texto{
+    margin-top:20px;
+    font-size:18px;
+}
+
+.volver{
+    display:block;
+    margin-top:20px;
+    color:blue;
+}
+
+@media(max-width:768px){
+    .galeria{
+        flex-direction:column;
+    }
+
+    .galeria img{
+        width:100%;
+    }
+
+    .imagen-principal{
+        height:250px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="contenido">
+
+<div class="titulo">Nóctulo Grande</div>
+
+<img class="imagen-principal" src="noc2.png">
+
+<div class="galeria">
+    <img src="nac4.png">
+    <img src="noc3.png">
+    <img src="N67.png">
+</div>
+
+<div class="texto">
+El nóctulo grande es una especie de quiróptero de la familia Vespertilionidae ampliamente distribuido por Asia, Europa y parte de África.
+es una especie de quiróptero de la familia Vespertilionidae. Se trata del mayor murciélago europeo, con una envergadura de hasta 46 cm. No parece presentar dimorfismo sexual en cuanto al tamaño ni al pelaje (es decir, no hay diferencias entre machos y hembras en estos aspectos). Este último es monocolor, denso, largo y lustroso, y se extiende por el patagio. Su color varía del castaño al rojizo, con el vientre más claro o amarillento. Esta especie de murciélago se caracteriza por tener orejas cortas, anchas y redondeadas, un antitrago grueso y un trago grande, con forma arriñonada.
+Aquí puedes añadir más información: tipos de vértebras, funciones o curiosidades.
+</div>
+
+<a class="volver" href="index.html">← Volver</a>
+
+</div>
+
+</body>
+</html>

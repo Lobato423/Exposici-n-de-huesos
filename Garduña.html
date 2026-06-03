@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Garduña</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial;
+    background-image: url("https://picsum.photos/1600/900?nature");
+    background-size: cover;
+    background-position: center;
+}
+
+.contenido{
+    background: rgba(255,255,255,0.9);
+    margin: 40px;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.titulo{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.imagen-principal{
+    width:100%;
+    height:400px;
+    object-fit: cover;
+    border-radius:10px;
+}
+
+.galeria{
+    display:flex;
+    gap:20px;
+    margin-top:20px;
+}
+
+.galeria img{
+    width:33%;
+    height:200px;
+    object-fit: cover;
+    border-radius:10px;
+}
+
+.texto{
+    margin-top:20px;
+    font-size:18px;
+}
+
+.volver{
+    display:block;
+    margin-top:20px;
+    color:blue;
+}
+
+/* 📱 móvil */
+@media(max-width:768px){
+    .galeria{
+        flex-direction:column;
+    }
+
+    .galeria img{
+        width:100%;
+    }
+
+    .imagen-principal{
+        height:250px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="contenido">
+
+<div class="titulo">Garduña</div>
+
+<img class="imagen-principal" src="g.png">
+
+<div class="galeria">
+    <img src="gar.png">
+    <img src="ard.png">
+    <img src="GAr2.png">
+</div>
+
+<div class="texto">
+La garduña es una especie de mamífero carnívoro de la familia Mustelidae. Es un depredador nocturno de tamaño mediano.
+
+En estado adulto, la garduña mide entre 40 y 50 cm de longitud, la cola mide entre 21 y 27 centímetros, y su peso oscila entre 1 y 2 kg.
+Se encuentra en el sur y centro de Europa hasta los países bálticos, Anatolia y los países mediterráneos del este, incluyendo las islas de Creta, Rodas y Corfú, Cáucaso, Irán, Irak, Mongolia, vertiente norte del Himalaya y China. Hay también una población establecida en Wisconsin (Estados Unidos) proveniente de ejemplares huidos del comercio de mascotas.
+
+Aquí puedes añadir más información para tu exposición: partes del fémur, funciones, curiosidades, etc.
+</div>
+
+<a class="volver" href="index.html">← Volver</a>
+
+</div>
+
+</body>
+</html>
