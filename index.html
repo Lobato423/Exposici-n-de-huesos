@@ -211,9 +211,150 @@ footer{
 
 }
 
+#chatbot{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:350px;
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 0 15px rgba(0,0,0,0.3);
+    z-index:999;
+}
+
+#chat-header{
+    background:#2c3e50;
+    color:white;
+    padding:15px;
+    font-weight:bold;
+}
+
+#chat-mensajes{
+    height:300px;
+    overflow-y:auto;
+    padding:10px;
+}
+
+.bot{
+    background:#e8f4ff;
+    padding:10px;
+    margin:5px 0;
+    border-radius:10px;
+}
+
+.user{
+    background:#d4ffd4;
+    padding:10px;
+    margin:5px 0;
+    border-radius:10px;
+}
+
+#chat-input{
+    display:flex;
+}
+
+#chat-input input{
+    flex:1;
+    padding:10px;
+    border:none;
+    border-top:1px solid #ccc;
+}
+
+#chat-input button{
+    padding:10px;
+    border:none;
+    background:#27ae60;
+    color:white;
+    cursor:pointer;
+}
 </style>
 </head>
+<!-- CHATBOT -->
+<div id="chatbot">
+    <div id="chat-header">
+        🦴 Asistente de Huesos
+    </div>
 
+    <div id="chat-mensajes">
+        <div class="bot">
+            Hola. Soy el asistente de la exposición. Pregúntame sobre el tejón, la garduña, el nóctulo grande o el turón.
+        </div>
+    </div>
+
+    <div id="chat-input">
+        <input type="text" id="pregunta" placeholder="Escribe una pregunta...">
+        <button onclick="responder()">Enviar</button>
+    </div>
+</div>
+<script>
+
+function responder(){
+
+    let pregunta = document.getElementById("pregunta").value.toLowerCase();
+
+    let mensajes = document.getElementById("chat-mensajes");
+
+    mensajes.innerHTML +=
+    "<div class='user'>" + pregunta + "</div>";
+
+    let respuesta = "";
+
+    if(pregunta.includes("tejon")){
+        respuesta =
+        "El tejón es un mamífero carnívoro de cuerpo robusto. Tiene un esqueleto fuerte y patas adaptadas para excavar madrigueras.";
+    }
+
+    else if(pregunta.includes("garduña")){
+        respuesta =
+        "La garduña es un pequeño mamífero carnívoro. Su esqueleto es ligero y flexible, ideal para trepar árboles y moverse con rapidez.";
+    }
+
+    else if(pregunta.includes("turon")){
+        respuesta =
+        "El turón pertenece a la familia de los mustélidos. Posee un cuerpo alargado y una columna vertebral muy flexible.";
+    }
+
+    else if(pregunta.includes("noctulo") ||
+            pregunta.includes("murcielago")){
+        respuesta =
+        "El nóctulo grande es uno de los murciélagos más grandes de Europa. Sus huesos son muy ligeros para facilitar el vuelo.";
+    }
+
+    else if(pregunta.includes("craneo")){
+        respuesta =
+        "El cráneo protege el cerebro y alberga los órganos sensoriales principales.";
+    }
+
+    else if(pregunta.includes("costillas")){
+        respuesta =
+        "Las costillas protegen órganos vitales como el corazón y los pulmones.";
+    }
+
+    else if(pregunta.includes("columna")){
+        respuesta =
+        "La columna vertebral sostiene el cuerpo y protege la médula espinal.";
+    }
+
+    else if(pregunta.includes("femur")){
+        respuesta =
+        "El fémur es el hueso más largo y resistente del cuerpo de muchos mamíferos.";
+    }
+
+    else{
+        respuesta =
+        "No tengo información sobre esa pregunta. Prueba a preguntar por el tejón, la garduña, el nóctulo grande, el turón o alguna parte del esqueleto.";
+    }
+
+    mensajes.innerHTML +=
+    "<div class='bot'>" + respuesta + "</div>";
+
+    document.getElementById("pregunta").value="";
+
+    mensajes.scrollTop = mensajes.scrollHeight;
+}
+
+</script>
 <body>
 
 <!-- ===== HEADER ===== -->
